@@ -80,4 +80,4 @@ self.process_file_button = tkinter.Button(window, text='Process File')
 self.process_file_button.grid(row=3, column=0)
 
 if __name__ == '__main__':
-	main()
+	window.mainloop()
