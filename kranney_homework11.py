@@ -13,27 +13,27 @@ class File:
 
 	def __init__(self, parent):
 
-window = tkinter.Tk()
+self.window = tkinter.Tk()
 
 # input file label
 # need to margin it to the left
-input_file_label = tkinter.Label(window, text='Input File:')
-input_file_label.grid(row=0, column=0)
+self.input_file_label = tkinter.Label(window, text='Input File:')
+self.input_file_label.grid(row=0, column=0)
 
 # output file label
 # directly under the input file text
-output_file_label = tkinter.Label(window, text='Output File:')
-output_file_label.grid(row=1, column=0)
+self.output_file_label = tkinter.Label(window, text='Output File:')
+self.output_file_label.grid(row=1, column=0)
 
 # text entry for input file
 # needs to be right next to the input text
-input_text_entry = tkinter.Entry(window)
-input_text_entry.grid(row=0, column=1)
+self.input_text_entry = tkinter.Entry(window)
+self.input_text_entry.grid(row=0, column=1)
 
 # text entry for output file
 # needs to be directly under input file entry
-output_text_entry = tkinter.Entry()
-output_text_entry.grid(row=1, column=1)
+self.output_text_entry = tkinter.Entry()
+self.output_text_entry.grid(row=1, column=1)
 
 # the input file button
 # needs to be to the right of the input entry
@@ -59,8 +59,8 @@ def input_file():
 	writer = 
 	
 	
-input_file_browse_button = tkinter.Button(window, text='Browse...')
-input_file_browse_button.grid(row=0, column=2)
+self.input_file_browse_button = tkinter.Button(window, text='Browse...')
+self.input_file_browse_button.grid(row=0, column=2)
 
 # the output file button
 # needs to be to the right of the output entry
@@ -72,11 +72,12 @@ def output_file():
 
 	pass
 
-output_file_browse_button = tkinter.Button(window, text='Browse...')
-output_file_browse_button.grid(row=1, column=2)
+self.output_file_browse_button = tkinter.Button(window, text='Browse...')
+self.output_file_browse_button.grid(row=1, column=2)
 
 # process file button
-process_file_button = tkinter.Button(window, text='Process File')
-process_file_button.grid(row=3, column=0)
+self.process_file_button = tkinter.Button(window, text='Process File')
+self.process_file_button.grid(row=3, column=0)
 
-window.mainloop()
+if __name__ == '__main__':
+	main()
