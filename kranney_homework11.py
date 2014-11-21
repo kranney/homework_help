@@ -6,6 +6,12 @@
 # need to write functions for each of the buttons
 # ask for help on how to move objects to particular locations
 import tkinter
+import tkinter.filedialog as dialog
+
+class File:
+	""" A simple counter GUI using object-oriented programming."""
+
+	def __init__(self, parent):
 
 window = tkinter.Tk()
 
@@ -37,15 +43,21 @@ def output_file():
 	display the output file in the output file entry box.
 	"""
 
-	pass
+	data = text.get('0.0', tkinter.END)
+	filename = dialog.asksaveasfilename(parent=root, filetypes=[('Text', '*.txt')], title='Save as...')
+	writer = open(filename, 'w')
+	writer.write(data)
+	writer.close()
 
 def input_file():
 	""" The function for the input file button. Will allow the user to 
 	choose what he/she would like the input file to be and will
 	display the input file in the input file entry box.
 	"""
-
-	pass
+	date = text.get('0.0', tkinter.END)
+	filename = dialog.asksaveasfilename(parent=root, filetypes=[('Text', '*txt')], title='Save as...')
+	writer = 
+	
 	
 input_file_browse_button = tkinter.Button(window, text='Browse...')
 input_file_browse_button.grid(row=0, column=2)
